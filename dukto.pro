@@ -9,7 +9,7 @@ QML_IMPORT_PATH =
 QT += core network qml quick widgets
 
 win32:RC_FILE = data/dukto.rc
-win32:LIBS += libWs2_32 libole32 libNetapi32
+win32:LIBS +=  libole32 libNetapi32
 
 mac:ICON = data/dukto.icns
 
