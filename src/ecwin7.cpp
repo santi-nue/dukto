@@ -76,7 +76,7 @@ void EcWin7::setProgressState(ToolBarProgressState state)
 {
 #ifdef Q_OS_WIN
     if (!mTaskbar) return;
-    mTaskbar->SetProgressState(mWindowId, (TBPFLAG)state);
+    mTaskbar->SetProgressState((HWND)mWindowId, (TBPFLAG)state);
 #endif
 }
 
