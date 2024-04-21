@@ -10,6 +10,7 @@ QT += core network qml quick widgets
 
 win32:RC_FILE = data/dukto.rc
 # win32:LIBS +=  libole32 libNetapi32
+LIBS += -lole32
 
 mac:ICON = data/dukto.icns
 
