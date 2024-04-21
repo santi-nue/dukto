@@ -24,4 +24,7 @@ jobs:
       - name: Set MSVC command prompt
         uses: ilammy/msvc-dev-cmd@v1
       - name: qmake
-        run: qmake
+        shell: cmd
+        run: |
+          qmake.exe dukto.pro -r -spec win32-msvc2019++ "CONFIG+=release"
+          nmake
