@@ -28,3 +28,16 @@ jobs:
         run: |
           qmake.exe dukto.pro -r -spec win32-msvc "CONFIG+=release"
           nmake
+       
+      - name: Archive Release
+        uses: thedoctor0/zip-release@master
+        with:
+          type: "zip"
+          filename: exe-windows.zip
+          directory: D:\a\dukto\dukto\
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          path: D:\a\dukto\dukto
+          name: exe-windows.zip
