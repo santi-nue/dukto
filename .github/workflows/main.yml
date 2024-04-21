@@ -26,5 +26,5 @@ jobs:
       - name: qmake
         shell: cmd
         run: |
-          qmake.exe dukto.pro -r -spec win32-msvc2019++ "CONFIG+=release"
+          qmake.exe dukto.pro -r -spec win32-msvc "CONFIG+=release"
           nmake
